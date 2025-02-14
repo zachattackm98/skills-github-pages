@@ -86,4 +86,9 @@ img {
         height: auto;
         background-size: contain;
     }
+}@media (max-width: 600px) {
+    .hero {
+        height: auto;
+        background-size: contain;
+    }
 }
