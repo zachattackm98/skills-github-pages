@@ -84,5 +84,6 @@ img {
     }
     .hero {
         height: auto;
+        background-size: contain;
     }
 }
