@@ -21,7 +21,8 @@
         }
         .hero {
             position: relative;
-            background: url('https://tyndaleusa.com/wp-content/uploads/2023/03/23-03-NFPA-70B-Series_pt1.png') no-repeat center center/cover;
+            background: url('https://tyndaleusa.com/wp-content/uploads/2023/03/23-03-NFPA-70B-Series_pt1.png') no-repeat center center;
+            background-size: contain;
             color: white;
             padding: 50px 20px;
             text-align: center;
@@ -87,26 +88,26 @@
             font-weight: bold;
             color: black;
             margin-top: 0;
-            background-color: #ffcc99; /* Light orange background */
+            background-color: #ffcc99;
             padding: 10px;
             border-radius: 5px;
         }
         .form-group input,
         .form-group select {
-            max-width: calc(100% - 20px); /* Prevents fields from extending too far */
+            max-width: calc(100% - 20px);
             margin: 0 auto;
             display: block;
         }
         ul {
-            padding-left: 20px; /* Adds padding to the left of the bullet points */
+            padding-left: 20px;
         }
         .no-bullets {
-            list-style-type: none; /* Removes bullet points */
-            padding-left: 0; /* Resets padding for the list */
+            list-style-type: none;
+            padding-left: 0;
         }
         .no-bullets li {
             position: relative;
-            padding-left: 25px; /* Adds padding to the left of the checkmark */
+            padding-left: 25px;
             display: flex;
             align-items: center;
         }
