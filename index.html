@@ -5,13 +5,154 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Are You NFPA 70B Compliant?</title>
     <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+        .container {
+            max-width: 1200px;
+            margin: auto;
+            padding: 20px;
+        }
+        .hero {
+            position: relative;
+            background: url('https://tyndaleusa.com/wp-content/uploads/2023/03/23-03-NFPA-70B-Series_pt1.png') no-repeat center center;
+            background-size: cover;
+            height: 100vh;
+            color: white;
+            text-align: center;
+        }
+        .intro {
+            padding: 20px;
+            background: rgba(0, 0, 0, 0.5);
+            color: white;
+            border-radius: 10px;
+            margin-top: 20px;
+        }
+        .intro h1 {
+            font-size: 2.5em;
+            margin: 0;
+        }
+        .intro p {
+            font-size: 1.2em;
+        }
+        .cta {
+            margin-top: 20px;
+            text-align: center;
+        }
+        .cta button {
+            padding: 15px 30px;
+            background-color: #007bff;
+            border: none;
+            border-radius: 5px;
+            color: white;
+            font-size: 1.2em;
+            cursor: pointer;
+        }
+        .cta button:hover {
+            background-color: #0056b3;
+        }
+        .content {
+            padding: 20px;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin-top: 20px;
+        }
+        .content h2 {
+            color: #007bff;
+        }
+        .content ul {
+            padding-left: 20px;
+        }
+        .testimonials {
+            background-color: #007bff;
+            color: white;
+            padding: 20px;
+            border-radius: 10px;
+            margin-top: 20px;
+        }
+        .testimonials h2 {
+            color: white;
+        }
+        .testimonials .testimonial {
+            margin-bottom: 10px;
+        }
+        .form-container {
+            border: 2px solid orange;
+            padding: 20px;
+            border-radius: 10px;
+            margin-top: 20px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .form-container h2 {
+            text-align: center;
+            font-weight: bold;
+            color: black;
+            margin-top: 0;
+            background-color: #ffcc99;
+            padding: 10px;
+            border-radius: 5px;
+        }
+        .form-group input,
+        .form-group select {
+            max-width: calc(100% - 20px);
+            margin: 0 auto;
+            display: block;
+        }
+        ul {
+            padding-left: 20px;
+        }
+        .no-bullets {
+            list-style-type: none;
+            padding-left: 0;
+        }
+        .no-bullets li {
+            position: relative;
+            padding-left: 25px;
+            display: flex;
+            align-items: center;
+        }
+        .no-bullets li:before {
+            content: "✔️";
+            position: absolute;
+            left: 0;
+            font-size: 1.2em;
+        }
+        @media (max-width: 600px) {
+            .hero {
+                height: auto;
+                background-size: contain;
+            }
+            .intro h1 {
+                font-size: 2em;
+            }
+            .intro p {
+                font-size: 1em;
+            }
+            .cta button {
+                font-size: 1em;
+                padding: 10px 20px;
+            }
+        }
+    </style>
 </head>
 <body>
     <div class="hero"></div>
     <div class="container">
-        <h1>Are You NFPA 70B Compliant?</h1>
-        <p>Stay ahead of OSHA regulations and avoid costly fines with predictive maintenance.</p>
-        <button class="btn">Get Your Free Compliance Guide Now!</button>
+        <div class="intro">
+            <h1>Are You NFPA 70B Compliant?</h1>
+            <p>Stay ahead of OSHA regulations and avoid costly fines with predictive maintenance.</p>
+        </div>
+        <div class="cta">
+            <button>Get Your Free Compliance Guide Now!</button>
+        </div>
         <div class="content">
             <h2>Key NFPA 70B Updates:</h2>
             <ul>
@@ -19,17 +160,21 @@
                 <li><strong>Scheduled Maintenance:</strong> "Equipment found to have anomalies shall be scheduled for corrective maintenance in accordance with the severity of the issue" - NFPA 70B.</li>
                 <li><strong>Predictive Maintenance:</strong> "Predictive maintenance, including infrared thermography, is essential to ensuring the reliability of electrical systems" - NFPA 70B.</li>
             </ul>
+            
             <h2>OSHA Crackdown on Arc Flash Hazards</h2>
             <p>OSHA is increasing enforcement on Arc Flash compliance following their recent safety initiative. Ensuring compliance with NFPA 70E and 70B is more critical than ever.</p>
             <p>Read more: <a href="https://www.osha.gov/news/newsreleases" target="_blank" rel="noopener noreferrer">OSHA Compliance Updates</a></p>
+            
             <h2>NFPA 70B Saves Lives</h2>
             <p>Implementing NFPA 70B guidelines helps prevent electrical failures that lead to injuries, fatalities, and costly damage. Regular thermal imaging inspections and predictive maintenance are essential to ensuring the reliability and safety of electrical systems.</p>
+            
             <h2>Key Statistics on Electrical Fires</h2>
             <ul>
                 <li><strong>Over 24,200 electrical fires</strong> occur annually, causing significant property damage and financial losses.</li>
                 <li><strong>More than $1.3 billion</strong> in damages are caused each year due to electrical system failures.</li>
                 <li><strong>Up to 51,000 fires</strong> annually are linked to electrical failures, resulting in fatalities and injuries.</li>
             </ul>
+            
             <h2>How We Can Help</h2>
             <ul class="no-bullets">
                 <li>Get matched with a certified thermal imaging contractor in your area.</li>
@@ -37,9 +182,11 @@
                 <li>Identify electrical hazards before they cause costly failures.</li>
                 <li>Improve workplace safety and reduce downtime.</li>
             </ul>
+            
             <h2 class="warning">⚠️ Don't Risk Non-Compliance – Take Action Now! ⚠️</h2>
             <p class="urgent">Facilities that fail to comply with NFPA 70B face increased risks of electrical fires, OSHA penalties, and equipment failure. Don’t take the risk—ensure compliance with NFPA 70B guidelines today.</p>
         </div>
+        
         <div class="testimonials">
             <h2>What Our Clients Say</h2>
             <div class="testimonial">
@@ -49,26 +196,32 @@
                 <p>"Their thorough inspections helped us identify potential hazards before they became a problem." - Sarah K.</p>
             </div>
         </div>
+        
         <div class="form-container">
             <h2>Contact a Thermal Imaging Partner Now to Ensure Your Compliance!</h2>
             <form action="https://manage.kmail-lists.com/subscriptions/subscribe" method="POST" target="_blank">
                 <input type="hidden" name="g" value="YOUR_KLAVIYO_LIST_ID">
+                
                 <div class="form-group">
                     <label for="name">Full Name</label>
                     <input type="text" id="name" name="name" required>
                 </div>
+                
                 <div class="form-group">
                     <label for="email">Work Email</label>
                     <input type="email" id="email" name="email" required>
                 </div>
+                
                 <div class="form-group">
                     <label for="company">Company Name</label>
                     <input type="text" id="company" name="company" required>
                 </div>
+                
                 <div class="form-group">
                     <label for="phone">Phone Number</label>
                     <input type="tel" id="phone" name="phone" pattern="\d{10,15}" title="Enter a valid phone number (10-15 digits)" required>
                 </div>
+                
                 <div class="form-group">
                     <label for="industry">Industry</label>
                     <select id="industry" name="industry" required>
@@ -87,6 +240,7 @@
                         <option value="Government">Government</option>
                     </select>
                 </div>
+                
                 <button type="submit" class="btn">Protect Your Facility & Avoid OSHA Fines – Get Your Free NFPA 70B Compliance Guide Now!</button>
             </form>
         </div>
