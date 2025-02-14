@@ -82,4 +82,7 @@ img {
         font-size: 14px;
         padding: 8px;
     }
+    .hero {
+        height: auto;
+    }
 }
