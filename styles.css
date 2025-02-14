@@ -85,6 +85,7 @@ img {
     .hero {
         height: auto;
         background-size: contain;
+        background-position: center;
     }
 }
 
@@ -92,5 +93,6 @@ img {
     .hero {
         height: auto;
         background-size: contain;
+        background-position: center;
     }
 }
