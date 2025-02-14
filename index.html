@@ -22,30 +22,22 @@
         .hero {
             position: relative;
             background: url('https://tyndaleusa.com/wp-content/uploads/2023/03/23-03-NFPA-70B-Series_pt1.png') no-repeat center center;
-            background-size: cover;
-            height: 100vh;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
+            background-size: contain;
             color: white;
+            padding: 50px 20px;
             text-align: center;
         }
-        .hero-content {
-            margin-top: 20px;
-            text-align: center;
-        }
-        .hero-content h1 {
+        .hero h1 {
             font-size: 2.5em;
             margin: 0;
         }
-        .hero-content p {
+        .hero p {
             font-size: 1.2em;
         }
-        .hero-content .cta {
+        .hero .cta {
             margin-top: 20px;
         }
-        .hero-content .cta button {
+        .hero .cta button {
             padding: 15px 30px;
             background-color: #007bff;
             border: none;
@@ -54,7 +46,7 @@
             font-size: 1.2em;
             cursor: pointer;
         }
-        .hero-content .cta button:hover {
+        .hero .cta button:hover {
             background-color: #0056b3;
         }
         .content {
@@ -132,17 +124,13 @@
             font-size: 1.2em;
         }
         @media (max-width: 600px) {
-            .hero {
-                height: auto;
-                padding: 20px;
-            }
-            .hero-content h1 {
+            .hero h1 {
                 font-size: 2em;
             }
-            .hero-content p {
+            .hero p {
                 font-size: 1em;
             }
-            .hero-content .cta button {
+            .hero .cta button {
                 font-size: 1em;
                 padding: 10px 20px;
             }
@@ -153,15 +141,14 @@
     </style>
 </head>
 <body>
-    <div class="hero"></div>
-    <div class="container">
-        <div class="hero-content">
-            <h1>Are You NFPA 70B Compliant?</h1>
-            <p>Stay ahead of OSHA regulations and avoid costly fines with predictive maintenance.</p>
-            <div class="cta">
-                <button>Get Your Free Compliance Guide Now!</button>
-            </div>
+    <div class="hero">
+        <h1>Are You NFPA 70B Compliant?</h1>
+        <p>Stay ahead of OSHA regulations and avoid costly fines with predictive maintenance.</p>
+        <div class="cta">
+            <button>Get Your Free Compliance Guide Now!</button>
         </div>
+    </div>
+    <div class="container">
         <div class="content">
             <h2>Key NFPA 70B Updates:</h2>
             <ul>
