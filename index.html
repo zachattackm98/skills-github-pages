@@ -36,30 +36,6 @@
         button:hover {
             background-color: #0056b3;
         }
-        /* Add this to your existing CSS */
-.form-container {
-    border: 2px solid orange;
-    padding: 20px;
-    border-radius: 10px;
-    margin-top: 20px;
-}
-
-.form-container h2 {
-    text-align: center;
-    font-weight: bold;
-    color: black;
-    margin-top: 0;
-    background-color: #ffcc99; /* Light orange background */
-    padding: 10px;
-    border-radius: 5px;
-}
-
-.form-group input,
-.form-group select {
-    max-width: calc(100% - 20px); /* Prevents fields from extending too far */
-    margin: 0 auto;
-    display: block;
-}
         @media (max-width: 600px) {
             .container {
                 padding: 10px;
@@ -71,12 +47,39 @@
             border-radius: 10px;
             margin-top: 20px;
         }
-
         .form-container h2 {
             text-align: center;
             font-weight: bold;
             color: black;
             margin-top: 0;
+            background-color: #ffcc99; /* Light orange background */
+            padding: 10px;
+            border-radius: 5px;
+        }
+        .form-group input,
+        .form-group select {
+            max-width: calc(100% - 20px); /* Prevents fields from extending too far */
+            margin: 0 auto;
+            display: block;
+        }
+        ul {
+            padding-left: 20px; /* Adds padding to the left of the bullet points */
+        }
+        .no-bullets {
+            list-style-type: none; /* Removes bullet points */
+            padding-left: 0; /* Resets padding for the list */
+        }
+        .no-bullets li {
+            position: relative;
+            padding-left: 25px; /* Adds padding to the left of the checkmark */
+            display: flex;
+            align-items: center;
+        }
+        .no-bullets li:before {
+            content: "✔️";
+            position: absolute;
+            left: 0;
+            font-size: 1.2em;
         }
     </style>
 </head>
@@ -98,7 +101,7 @@
         
         <h2>OSHA Crackdown on Arc Flash Hazards</h2>
         <p>OSHA is increasing enforcement on Arc Flash compliance following their recent safety initiative. Ensuring compliance with NFPA 70E and 70B is more critical than ever.</p>
-        <p>Read more: <a href="https://www.osha.gov/news/newsreleases" target="_blank">OSHA Compliance Updates</a></p>
+        <p>Read more: <a href="https://www.osha.gov/news/newsreleases" target="_blank" rel="noopener noreferrer">OSHA Compliance Updates</a></p>
         
         <h2>NFPA 70B Saves Lives</h2>
         <p>Implementing NFPA 70B guidelines helps prevent electrical failures that lead to injuries, fatalities, and costly damage. Regular thermal imaging inspections and predictive maintenance significantly reduce these risks.</p>
@@ -112,59 +115,61 @@
         
         <h2>How We Can Help</h2>
         <ul class="no-bullets">
-            <li>✔️ Get matched with a certified thermal imaging contractor in your area.</li>
-            <li>✔️ Ensure compliance with OSHA and NFPA 70B requirements.</li>
-            <li>✔️ Identify electrical hazards before they cause costly failures.</li>
-            <li>✔️ Improve workplace safety and reduce downtime.</li>
+            <li>Get matched with a certified thermal imaging contractor in your area.</li>
+            <li>Ensure compliance with OSHA and NFPA 70B requirements.</li>
+            <li>Identify electrical hazards before they cause costly failures.</li>
+            <li>Improve workplace safety and reduce downtime.</li>
         </ul>
         
         <h2 class="warning">⚠️ Don't Risk Non-Compliance – Take Action Now! ⚠️</h2>
         <p class="urgent">Facilities that fail to comply with NFPA 70B face increased risks of electrical fires, OSHA penalties, and equipment failure. Don’t take the risk—ensure compliance today.</p>
-       <div class="form-container">
-    <h2>Contact a Thermal Imaging Partner Now to Ensure Your Compliance!</h2>
-    <form action="https://manage.kmail-lists.com/subscriptions/subscribe" method="POST" target="_blank">
-        <input type="hidden" name="g" value="YOUR_KLAVIYO_LIST_ID">
-        
-        <div class="form-group">
-            <label for="name">Full Name</label>
-            <input type="text" id="name" name="name" required>
+        <div class="form-container">
+            <h2>Contact a Thermal Imaging Partner Now to Ensure Your Compliance!</h2>
+            <form action="https://manage.kmail-lists.com/subscriptions/subscribe" method="POST" target="_blank">
+                <input type="hidden" name="g" value="YOUR_KLAVIYO_LIST_ID">
+                
+                <div class="form-group">
+                    <label for="name">Full Name</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="email">Work Email</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="company">Company Name</label>
+                    <input type="text" id="company" name="company" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="phone">Phone Number</label>
+                    <input type="tel" id="phone" name="phone" pattern="\d{10,15}" title="Enter a valid phone number (10-15 digits)" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="industry">Industry</label>
+                    <select id="industry" name="industry" required>
+                        <option value="">Select Industry</option>
+                        <option value="Manufacturing">Manufacturing</option>
+                        <option value="Healthcare">Healthcare</option>
+                        <option value="Education">Education</option>
+                        <option value="Technology">Technology</option>
+                        <option value="Finance">Finance</option>
+                        <option value="Retail">Retail</option>
+                        <option value="Construction">Construction</option>
+                        <option value="Transportation">Transportation</option>
+                        <option value="Energy">Energy</option>
+                        <option value="Hospitality">Hospitality</option>
+                        <option value="Agriculture">Agriculture</option>
+                        <option value="Government">Government</option>
+                    </select>
+                </div>
+                
+                <button type="submit" class="btn">Protect Your Facility & Avoid OSHA Fines – Get Your Free NFPA 70B Compliance Guide Now!</button>
+            </form>
         </div>
-        
-        <div class="form-group">
-            <label for="email">Work Email</label>
-            <input type="email" id="email" name="email" required>
-        </div>
-        
-        <div class="form-group">
-            <label for="company">Company Name</label>
-            <input type="text" id="company" name="company" required>
-        </div>
-        
-        <div class="form-group">
-            <label for="phone">Phone Number</label>
-            <input type="tel" id="phone" name="phone" pattern="\d{10,15}" title="Enter a valid phone number (10-15 digits)" required>
-        </div>
-        
-        <div class="form-group">
-            <label for="industry">Industry</label>
-            <select id="industry" name="industry" required>
-                <option value="">Select Industry</option>
-                <option value="Manufacturing">Manufacturing</option>
-                <option value="Healthcare">Healthcare</option>
-                <option value="Education">Education</option>
-                <option value="Technology">Technology</option>
-                <option value="Finance">Finance</option>
-                <option value="Retail">Retail</option>
-                <option value="Construction">Construction</option>
-                <option value="Transportation">Transportation</option>
-                <option value="Energy">Energy</option>
-                <option value="Hospitality">Hospitality</option>
-                <option value="Agriculture">Agriculture</option>
-                <option value="Government">Government</option>
-            </select>
-        </div>
-        
-        <button type="submit" class="btn">Protect Your Facility & Avoid OSHA Fines – Get Your Free NFPA 70B Compliance Guide Now!</button>
-    </form>
-</div>
+    </div>
+</body>
 </html>
