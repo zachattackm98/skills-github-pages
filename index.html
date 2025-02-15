@@ -21,22 +21,34 @@
         }
         .hero {
             position: relative;
-            background: url('hero-background.jpg') no-repeat center center/cover;
+            background: url('https://tyndaleusa.com/wp-content/uploads/2023/03/23-03-NFPA-70B-Series_pt1.png') no-repeat center center;
+            background-size: cover;
+            height: 100vh;
             color: white;
-            padding: 50px 20px;
             text-align: center;
         }
-        .hero h1 {
+        .intro {
+            padding: 20px;
+            background: rgba(0, 0, 0, 0.5);
+            color: white;
+            border-radius: 10px;
+            position: absolute;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            text-align: center;
+        }
+        .intro h1 {
             font-size: 2.5em;
             margin: 0;
         }
-        .hero p {
+        .intro p {
             font-size: 1.2em;
         }
-        .hero .cta {
+        .cta {
             margin-top: 20px;
         }
-        .hero .cta button {
+        .cta button {
             padding: 15px 30px;
             background-color: #007bff;
             border: none;
@@ -45,7 +57,7 @@
             font-size: 1.2em;
             cursor: pointer;
         }
-        .hero .cta button:hover {
+        .cta button:hover {
             background-color: #0056b3;
         }
         .content {
@@ -53,7 +65,7 @@
             background-color: white;
             border-radius: 10px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            margin-top: -50px;
+            margin-top: 20px;
         }
         .content h2 {
             color: #007bff;
@@ -87,26 +99,26 @@
             font-weight: bold;
             color: black;
             margin-top: 0;
-            background-color: #ffcc99; /* Light orange background */
+            background-color: #ffcc99;
             padding: 10px;
             border-radius: 5px;
         }
         .form-group input,
         .form-group select {
-            max-width: calc(100% - 20px); /* Prevents fields from extending too far */
+            max-width: calc(100% - 20px);
             margin: 0 auto;
             display: block;
         }
         ul {
-            padding-left: 20px; /* Adds padding to the left of the bullet points */
+            padding-left: 20px;
         }
         .no-bullets {
-            list-style-type: none; /* Removes bullet points */
-            padding-left: 0; /* Resets padding for the list */
+            list-style-type: none;
+            padding-left: 0;
         }
         .no-bullets li {
             position: relative;
-            padding-left: 25px; /* Adds padding to the left of the checkmark */
+            padding-left: 25px;
             display: flex;
             align-items: center;
         }
@@ -116,17 +128,35 @@
             left: 0;
             font-size: 1.2em;
         }
+        @media (max-width: 600px) {
+            .hero h1 {
+                font-size: 2em;
+            }
+            .hero p {
+                font-size: 1em;
+            }
+            .hero .cta button {
+                font-size: 1em;
+                padding: 10px 20px;
+            }
+            .content {
+                margin-top: -30px;
+            }
+        }
     </style>
 </head>
 <body>
     <div class="hero">
-        <h1>Are You NFPA 70B Compliant?</h1>
-        <p>Stay ahead of OSHA regulations and avoid costly fines with predictive maintenance.</p>
+        <!-- Image Section -->
+    </div>
+    <div class="container">
+        <div class="intro">
+            <h1>Are You NFPA 70B Compliant?</h1>
+            <p>Stay ahead of OSHA regulations and avoid costly fines with predictive maintenance.</p>
+        </div>
         <div class="cta">
             <button>Get Your Free Compliance Guide Now!</button>
         </div>
-    </div>
-    <div class="container">
         <div class="content">
             <h2>Key NFPA 70B Updates:</h2>
             <ul>
