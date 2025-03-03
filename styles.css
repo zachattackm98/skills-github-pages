@@ -1,116 +1,303 @@
-body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f7fc;
-    color: #333;
-    line-height: 1.6;
-    margin: 0;
-    padding: 0;
-}
-.container {
-    max-width: 800px;
-    margin: 40px auto;
-    background: white;
-    padding: 30px;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-    border-radius: 8px;
-}
-.hero {
-    height: 50vh;
-    background: url('https://tyndaleusa.com/wp-content/uploads/2023/03/23-03-NFPA-70B-Series_pt1.png') no-repeat center center;
-    background-size: cover;
-}
-h1, h2 {
-    color: #0056b3;
-}
-h1 {
-    text-align: center;
-    margin-bottom: 20px;
-}
-ul {
-    background: #eef3fa;
-    padding: 15px;
-    border-radius: 5px;
-}
-ul li {
-    margin-bottom: 10px;
-}
-.btn {
-    display: block;
-    width: 100%;
-    text-align: center;
-    background: #007bff;
-    color: white;
-    padding: 12px;
-    font-size: 18px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background 0.3s;
-}
-.btn:hover {
-    background: #0056b3;
-}
-.warning {
-    color: red;
-    text-align: center;
-    font-weight: bold;
-}
-.urgent {
-    text-align: center;
-    font-weight: bold;
-    color: red;
-}
-img {
-    max-width: 100%;
-    height: auto;
-    display: block;
-    margin: 0 auto;
-}
-.testimonials {
-    background-color: #007bff;
-    color: white;
-    padding: 20px;
-    border-radius: 10px;
-    margin-top: 20px;
-}
-.testimonials h2 {
-    color: white;
-}
-.testimonials .testimonial {
-    margin-bottom: 10px;
-}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NFPA 70B Compliance Solutions | Electrical Safety Experts</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <a href="#" class="logo">NFPA CompliancePro</a>
+            <ul class="nav-menu">
+                <li class="nav-item"><a href="#about" class="nav-link">About</a></li>
+                <li class="nav-item"><a href="#services" class="nav-link">Services</a></li>
+                <li class="nav-item"><a href="#stats" class="nav-link">Statistics</a></li>
+                <li class="nav-item"><a href="#testimonials" class="nav-link">Testimonials</a></li>
+                <li class="nav-item"><a href="#contact" class="nav-link cta">Get Started</a></li>
+            </ul>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
 
-/* Responsive Design */
-@media screen and (max-width: 768px) {
-    .container {
-        width: 90%;
-        padding: 20px;
-    }
-    h1, h2 {
-        font-size: 22px;
-    }
-    ul {
-        padding: 10px;
-    }
-    .btn {
-        font-size: 16px;
-        padding: 10px;
-    }
-    input, select {
-        font-size: 14px;
-        padding: 8px;
-    }
-    .hero {
-        height: auto;
-        background-size: contain;
-        background-position: center;
-    }
-}
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container hero-content">
+            <h1>Is Your Facility NFPA 70B Compliant?</h1>
+            <p>Stay ahead of OSHA regulations, prevent electrical fires, and avoid costly fines with our professional predictive maintenance solutions.</p>
+            <a href="#contact" class="btn">Get Your Free Compliance Assessment</a>
+        </div>
+    </section>
 
-@media (max-width: 600px) {
-    .hero {
-        height: auto;
-        background-size: contain;
-        background-position: center;
-    }
-}
+    <!-- Key NFPA Updates -->
+    <section id="about" class="section">
+        <div class="container">
+            <h2 class="section-title">Critical NFPA 70B Updates</h2>
+            <div class="info-cards">
+                <div class="card animate">
+                    <div class="card-header">
+                        <h3>Annual Inspections</h3>
+                    </div>
+                    <div class="card-body">
+                        <p>"Thermographic inspections shall be performed annually on electrical equipment to identify overheating components" - NFPA 70B.</p>
+                        <a href="#contact" class="btn">Schedule Inspection</a>
+                    </div>
+                </div>
+                <div class="card animate">
+                    <div class="card-header">
+                        <h3>Scheduled Maintenance</h3>
+                    </div>
+                    <div class="card-body">
+                        <p>"Equipment found to have anomalies shall be scheduled for corrective maintenance in accordance with the severity of the issue" - NFPA 70B.</p>
+                        <a href="#contact" class="btn">Learn More</a>
+                    </div>
+                </div>
+                <div class="card animate">
+                    <div class="card-header">
+                        <h3>Predictive Maintenance</h3>
+                    </div>
+                    <div class="card-body">
+                        <p>"Predictive maintenance, including infrared thermography, is essential to ensuring the reliability of electrical systems" - NFPA 70B.</p>
+                        <a href="#contact" class="btn">Get Started</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- OSHA Crackdown -->
+    <section id="services" class="section">
+        <div class="container">
+            <h2 class="section-title">OSHA's Enhanced Enforcement on Arc Flash Hazards</h2>
+            <p style="text-align: center; max-width: 800px; margin: 0 auto 40px;">OSHA is increasing enforcement on Arc Flash compliance following their recent safety initiative. Ensuring compliance with NFPA 70E and 70B is more critical than ever for workplace safety and avoiding penalties.</p>
+            
+            <div class="card animate" style="max-width: 800px; margin: 0 auto;">
+                <div class="card-header" style="display: flex; justify-content: space-between; align-items: center;">
+                    <h3>NFPA 70B Saves Lives</h3>
+                    <span style="font-size: 2rem;">⚡</span>
+                </div>
+                <div class="card-body">
+                    <p>Implementing NFPA 70B guidelines helps prevent electrical failures that lead to injuries, fatalities, and costly damage. Regular thermal imaging inspections and predictive maintenance significantly reduce these risks.</p>
+                    <a href="https://www.osha.gov/news/newsreleases" target="_blank" rel="noopener noreferrer" class="btn">OSHA Compliance Updates</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Statistics -->
+    <section id="stats" class="section stats">
+        <div class="container">
+            <h2 class="section-title" style="color: white;">Electrical Fire Statistics</h2>
+            <div class="stats-container">
+                <div class="stat-item animate">
+                    <div class="stat-icon">🔥</div>
+                    <h3>
+                        <span class="counter" data-target="24200">0</span>
+                        <span class="counter-suffix">+</span>
+                    </h3>
+                    <p>Electrical fires occur annually in commercial buildings</p>
+                </div>
+                <div class="stat-item animate">
+                    <div class="stat-icon">💵</div>
+                    <h3>
+                        <span class="counter" data-target="1300">0</span>
+                        <span class="counter-suffix">M+</span>
+                    </h3>
+                    <p>In damages caused by electrical system failures</p>
+                </div>
+                <div class="stat-item animate">
+                    <div class="stat-icon">⚠️</div>
+                    <h3>
+                        <span class="counter" data-target="51000">0</span>
+                    </h3>
+                    <p>Fires annually linked to electrical failures causing injuries</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features -->
+    <section class="section features">
+        <div class="container">
+            <h2 class="section-title">How We Can Help</h2>
+            <ul class="feature-list">
+                <li class="feature-item animate">
+                    <div class="feature-icon">✓</div>
+                    <div class="feature-text">
+                        <h3>Certified Thermal Imaging Contractors</h3>
+                        <p>Get matched with a certified thermal imaging contractor in your area.</p>
+                    </div>
+                </li>
+                <li class="feature-item animate">
+                    <div class="feature-icon">✓</div>
+                    <div class="feature-text">
+                        <h3>OSHA & NFPA 70B Compliance</h3>
+                        <p>Ensure compliance with all current OSHA and NFPA 70B requirements.</p>
+                    </div>
+                </li>
+                <li class="feature-item animate">
+                    <div class="feature-icon">✓</div>
+                    <div class="feature-text">
+                        <h3>Early Hazard Detection</h3>
+                        <p>Identify electrical hazards before they cause costly failures.</p>
+                    </div>
+                </li>
+                <li class="feature-item animate">
+                    <div class="feature-icon">✓</div>
+                    <div class="feature-text">
+                        <h3>Improved Safety & Reduced Downtime</h3>
+                        <p>Improve workplace safety and reduce costly operational downtime.</p>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section id="testimonials" class="section testimonials">
+        <div class="container">
+            <h2 class="section-title">What Our Clients Say</h2>
+            <div class="testimonial-container">
+                <div class="testimonial-item">
+                    <div class="testimonial-content">
+                        <p class="testimonial-text">"Thanks to their services, we are now fully compliant and our workplace is much safer! The thermal imaging identified issues we never knew existed."</p>
+                        <p class="testimonial-author">- John D., Manufacturing Plant Manager</p>
+                    </div>
+                </div>
+                <div class="testimonial-item">
+                    <div class="testimonial-content">
+                        <p class="testimonial-text">"Their thorough inspections helped us identify potential hazards before they became a problem. We've seen a remarkable improvement in our electrical system reliability."</p>
+                        <p class="testimonial-author">- Sarah K., Facility Director</p>
+                    </div>
+                </div>
+                <div class="testimonial-item">
+                    <div class="testimonial-content">
+                        <p class="testimonial-text">"The compliance guide was incredibly helpful. We implemented the recommended changes and passed our OSHA inspection with flying colors."</p>
+                        <p class="testimonial-author">- Michael R., Safety Coordinator</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <span class="warning-badge">⚠️ Warning</span>
+            <h2>Don't Risk Non-Compliance</h2>
+            <p>Facilities that fail to comply with NFPA 70B face increased risks of electrical fires, OSHA penalties, and equipment failure. Don't take the risk—ensure compliance today.</p>
+            <a href="#contact" class="btn">Get Your Free Compliance Guide</a>
+        </div>
+    </section>
+
+    <!-- Contact Form -->
+    <section id="contact" class="section contact">
+        <div class="container">
+            <h2 class="section-title">Contact a Thermal Imaging Partner Now</h2>
+            <div class="form-container animate">
+                <form action="https://manage.kmail-lists.com/subscriptions/subscribe" method="POST" target="_blank" id="contact-form">
+                    <input type="hidden" name="g" value="YOUR_KLAVIYO_LIST_ID">
+                    
+                    <div class="form-group">
+                        <label for="name">Full Name</label>
+                        <input type="text" id="name" name="name" class="form-control" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="email">Work Email</label>
+                        <input type="email" id="email" name="email" class="form-control" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="company">Company Name</label>
+                        <input type="text" id="company" name="company" class="form-control" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="phone">Phone Number</label>
+                        <input type="tel" id="phone" name="phone" class="form-control" pattern="\d{10,15}" title="Enter a valid phone number (10-15 digits)" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="industry">Industry</label>
+                        <select id="industry" name="industry" class="form-control" required>
+                            <option value="">Select Industry</option>
+                            <option value="Manufacturing">Manufacturing</option>
+                            <option value="Healthcare">Healthcare</option>
+                            <option value="Education">Education</option>
+                            <option value="Technology">Technology</option>
+                            <option value="Finance">Finance</option>
+                            <option value="Retail">Retail</option>
+                            <option value="Construction">Construction</option>
+                            <option value="Transportation">Transportation</option>
+                            <option value="Energy">Energy</option>
+                            <option value="Hospitality">Hospitality</option>
+                            <option value="Agriculture">Agriculture</option>
+                            <option value="Government">Government</option>
+                        </select>
+                    </div>
+                    
+                    <button type="submit" class="submit-btn">Protect Your Facility & Get Your Free NFPA 70B Compliance Guide</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-container">
+                <div class="footer-section">
+                    <h3>About Us</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">Our Mission</a></li>
+                        <li><a href="#">Our Team</a></li>
+                        <li><a href="#">Our Partners</a></li>
+                        <li><a href="#">Careers</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Services</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">Thermal Imaging</a></li>
+                        <li><a href="#">Compliance Consulting</a></li>
+                        <li><a href="#">Preventative Maintenance</a></li>
+                        <li><a href="#">Emergency Services</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Resources</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">NFPA 70B Guide</a></li>
+                        <li><a href="#">OSHA Regulations</a></li>
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="#">FAQ</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Contact</h3>
+                    <ul class="footer-links">
+                        <li><a href="tel:+18001234567">1-800-123-4567</a></li>
+                        <li><a href="mailto:info@nfpacompliancepro.com">info@nfpacompliancepro.com</a></li>
+                        <li><a href="#">Support</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copy">
+                <p>&copy; 2025 NFPA CompliancePro. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
