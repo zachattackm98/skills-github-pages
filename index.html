@@ -3,237 +3,871 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Are You NFPA 70B Compliant?</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>NFPA 70B Compliance Solutions | Electrical Safety Experts</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            line-height: 1.6;
+        :root {
+            --primary: #0066cc;
+            --primary-dark: #004e9e;
+            --secondary: #ff7700;
+            --secondary-light: #ffebb3;
+            --danger: #dc3545;
+            --dark: #212529;
+            --light: #f8f9fa;
+            --gray: #6c757d;
+            --gray-light: #e9ecef;
+            --success: #198754;
+        }
+        
+        * {
             margin: 0;
             padding: 0;
-            background-color: #f4f4f4;
-            color: #333;
+            box-sizing: border-box;
         }
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            line-height: 1.6;
+            color: var(--dark);
+            background-color: var(--light);
+            overflow-x: hidden;
+        }
+        
         .container {
+            width: 100%;
             max-width: 1200px;
-            margin: auto;
-            padding: 20px;
-        }
-        .hero {
-            position: relative;
-            background: url('https://tyndaleusa.com/wp-content/uploads/2023/03/23-03-NFPA-70B-Series_pt1.png') no-repeat center center;
-            background-size: contain;
-            color: white;
-            padding: 50px 20px;
-            text-align: center;
-        }
-        .hero h1 {
-            font-size: 2.5em;
-            margin: 0;
-        }
-        .hero p {
-            font-size: 1.2em;
-        }
-        .hero .cta {
-            margin-top: 20px;
-        }
-        .hero .cta button {
-            padding: 15px 30px;
-            background-color: #007bff;
-            border: none;
-            border-radius: 5px;
-            color: white;
-            font-size: 1.2em;
-            cursor: pointer;
-        }
-        .hero .cta button:hover {
-            background-color: #0056b3;
-        }
-        .content {
-            padding: 20px;
-            background-color: white;
-            border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            margin-top: -50px;
-        }
-        .content h2 {
-            color: #007bff;
-        }
-        .content ul {
-            padding-left: 20px;
-        }
-        .testimonials {
-            background-color: #007bff;
-            color: white;
-            padding: 20px;
-            border-radius: 10px;
-            margin-top: 20px;
-        }
-        .testimonials h2 {
-            color: white;
-        }
-        .testimonials .testimonial {
-            margin-bottom: 10px;
-        }
-        .form-container {
-            border: 2px solid orange;
-            padding: 20px;
-            border-radius: 10px;
-            margin-top: 20px;
-            background-color: #fff;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        }
-        .form-container h2 {
-            text-align: center;
-            font-weight: bold;
-            color: black;
-            margin-top: 0;
-            background-color: #ffcc99;
-            padding: 10px;
-            border-radius: 5px;
-        }
-        .form-group input,
-        .form-group select {
-            max-width: calc(100% - 20px);
             margin: 0 auto;
-            display: block;
+            padding: 0 20px;
         }
-        ul {
-            padding-left: 20px;
+        
+        /* Navigation */
+        .navbar {
+            background-color: white;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            padding: 15px 0;
         }
-        .no-bullets {
-            list-style-type: none;
-            padding-left: 0;
-        }
-        .no-bullets li {
-            position: relative;
-            padding-left: 25px;
+        
+        .navbar .container {
             display: flex;
+            justify-content: space-between;
             align-items: center;
         }
-        .no-bullets li:before {
-            content: "✔️";
-            position: absolute;
-            left: 0;
-            font-size: 1.2em;
+        
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--primary);
+            text-decoration: none;
         }
-        @media (max-width: 600px) {
+        
+        .nav-menu {
+            display: flex;
+            list-style: none;
+        }
+        
+        .nav-item {
+            margin-left: 30px;
+        }
+        
+        .nav-link {
+            color: var(--dark);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+        
+        .nav-link:hover {
+            color: var(--primary);
+        }
+        
+        .nav-link.cta {
+            background-color: var(--primary);
+            color: white;
+            padding: 10px 20px;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+        
+        .nav-link.cta:hover {
+            background-color: var(--primary-dark);
+        }
+        
+        .hamburger {
+            display: none;
+            cursor: pointer;
+        }
+        
+        .bar {
+            display: block;
+            width: 25px;
+            height: 3px;
+            margin: 5px auto;
+            background-color: var(--dark);
+            transition: all 0.3s ease;
+        }
+        
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('https://tyndaleusa.com/wp-content/uploads/2023/03/23-03-NFPA-70B-Series_pt1.png');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            color: white;
+            padding: 100px 0;
+            text-align: center;
+        }
+        
+        .hero-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .hero h1 {
+            font-size: 3rem;
+            font-weight: 700;
+            margin-bottom: 20px;
+            line-height: 1.2;
+        }
+        
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 40px;
+            opacity: 0.9;
+        }
+        
+        .btn {
+            display: inline-block;
+            padding: 15px 30px;
+            background-color: var(--secondary);
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            text-decoration: none;
+            transition: all 0.3s;
+        }
+        
+        .btn:hover {
+            background-color: #e56c00;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        /* Main Content */
+        .section {
+            padding: 80px 0;
+        }
+        
+        .section-title {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 50px;
+            color: var(--primary);
+        }
+        
+        /* Info Cards */
+        .info-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 50px;
+        }
+        
+        .card {
+            background-color: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+        }
+        
+        .card-header {
+            background-color: var(--primary);
+            color: white;
+            padding: 20px;
+        }
+        
+        .card-body {
+            padding: 20px;
+        }
+        
+        .card h3 {
+            margin-bottom: 15px;
+            font-size: 1.5rem;
+        }
+        
+        .card p {
+            color: var(--gray);
+            margin-bottom: 15px;
+        }
+        
+        /* Stats Section */
+        .stats {
+            background-color: var(--primary);
+            color: white;
+        }
+        
+        .stats-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 30px;
+            text-align: center;
+        }
+        
+        .stat-item h3 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+        
+        .stat-item p {
+            font-size: 1.1rem;
+            opacity: 0.9;
+        }
+        
+        /* Features */
+        .features {
+            background-color: var(--gray-light);
+        }
+        
+        .feature-list {
+            list-style: none;
+        }
+        
+        .feature-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 25px;
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s;
+        }
+        
+        .feature-item:hover {
+            transform: translateX(5px);
+        }
+        
+        .feature-icon {
+            min-width: 50px;
+            height: 50px;
+            background-color: var(--secondary-light);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 20px;
+            color: var(--secondary);
+            font-size: 1.5rem;
+        }
+        
+        .feature-text h3 {
+            margin-bottom: 5px;
+            font-size: 1.2rem;
+        }
+        
+        /* Testimonials */
+        .testimonials {
+            background-color: white;
+        }
+        
+        .testimonial-container {
+            display: flex;
+            overflow-x: auto;
+            scroll-snap-type: x mandatory;
+            gap: 30px;
+            padding-bottom: 30px;
+            scrollbar-width: thin;
+            scrollbar-color: var(--primary) var(--gray-light);
+        }
+        
+        .testimonial-container::-webkit-scrollbar {
+            height: 6px;
+        }
+        
+        .testimonial-container::-webkit-scrollbar-track {
+            background: var(--gray-light);
+            border-radius: 10px;
+        }
+        
+        .testimonial-container::-webkit-scrollbar-thumb {
+            background-color: var(--primary);
+            border-radius: 10px;
+        }
+        
+        .testimonial-item {
+            scroll-snap-align: start;
+            min-width: 300px;
+            flex: 1;
+            background-color: var(--light);
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            position: relative;
+        }
+        
+        .testimonial-item::before {
+            content: '"';
+            font-size: 5rem;
+            color: var(--primary);
+            opacity: 0.2;
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            line-height: 1;
+        }
+        
+        .testimonial-content {
+            position: relative;
+            z-index: 1;
+        }
+        
+        .testimonial-text {
+            margin-bottom: 20px;
+            font-style: italic;
+        }
+        
+        .testimonial-author {
+            font-weight: 600;
+            color: var(--primary);
+        }
+        
+        /* CTA Section */
+        .cta-section {
+            background: linear-gradient(to right, var(--primary), var(--primary-dark));
+            color: white;
+            text-align: center;
+            padding: 60px 0;
+        }
+        
+        .cta-section h2 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+        
+        .cta-section p {
+            font-size: 1.2rem;
+            margin-bottom: 40px;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .warning-badge {
+            display: inline-block;
+            background-color: var(--danger);
+            color: white;
+            padding: 8px 15px;
+            border-radius: 30px;
+            font-weight: 600;
+            margin-bottom: 20px;
+        }
+        
+        /* Contact Form */
+        .contact {
+            background-color: white;
+        }
+        
+        .form-container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            border-top: 5px solid var(--secondary);
+        }
+        
+        .form-group {
+            margin-bottom: 25px;
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 500;
+        }
+        
+        .form-control {
+            width: 100%;
+            padding: 15px;
+            border: 1px solid var(--gray-light);
+            border-radius: 5px;
+            font-size: 1rem;
+            transition: border-color 0.3s;
+        }
+        
+        .form-control:focus {
+            outline: none;
+            border-color: var(--primary);
+            box-shadow: 0 0 0 3px rgba(0, 102, 204, 0.25);
+        }
+        
+        .submit-btn {
+            background-color: var(--secondary);
+            color: white;
+            border: none;
+            padding: 15px 30px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1rem;
+            font-weight: 600;
+            width: 100%;
+            transition: all 0.3s;
+        }
+        
+        .submit-btn:hover {
+            background-color: #e56c00;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        /* Footer */
+        .footer {
+            background-color: var(--dark);
+            color: white;
+            padding: 60px 0 30px;
+        }
+        
+        .footer-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 30px;
+            margin-bottom: 30px;
+        }
+        
+        .footer-section h3 {
+            margin-bottom: 20px;
+            font-size: 1.2rem;
+            color: var(--secondary);
+        }
+        
+        .footer-links {
+            list-style: none;
+        }
+        
+        .footer-links li {
+            margin-bottom: 10px;
+        }
+        
+        .footer-links a {
+            color: #aaa;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        
+        .footer-links a:hover {
+            color: white;
+        }
+        
+        .copy {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid #444;
+            color: #aaa;
+            font-size: 0.9rem;
+        }
+        
+        /* Animation */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .animate {
+            animation: fadeIn 0.6s ease-in-out;
+        }
+        
+        /* Media Queries */
+        @media (max-width: 992px) {
+            .section-title {
+                font-size: 2rem;
+            }
+            
             .hero h1 {
-                font-size: 2em;
+                font-size: 2.5rem;
             }
+        }
+        
+        @media (max-width: 768px) {
+            .hamburger {
+                display: block;
+            }
+            
+            .hamburger.active .bar:nth-child(2) {
+                opacity: 0;
+            }
+            
+            .hamburger.active .bar:nth-child(1) {
+                transform: translateY(8px) rotate(45deg);
+            }
+            
+            .hamburger.active .bar:nth-child(3) {
+                transform: translateY(-8px) rotate(-45deg);
+            }
+            
+            .nav-menu {
+                position: fixed;
+                left: -100%;
+                top: 70px;
+                gap: 0;
+                flex-direction: column;
+                background-color: white;
+                width: 100%;
+                text-align: center;
+                transition: 0.3s;
+                box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+                padding: 20px 0;
+            }
+            
+            .nav-item {
+                margin: 16px 0;
+            }
+            
+            .nav-menu.active {
+                left: 0;
+            }
+            
+            .hero h1 {
+                font-size: 2rem;
+            }
+            
             .hero p {
-                font-size: 1em;
+                font-size: 1rem;
             }
-            .hero .cta button {
-                font-size: 1em;
-                padding: 10px 20px;
-            }
-            .content {
-                margin-top: -30px;
+            
+            .info-cards {
+                grid-template-columns: 1fr;
             }
         }
     </style>
 </head>
 <body>
-    <div class="hero">
-        <h1>Are You NFPA 70B Compliant?</h1>
-        <p>Stay ahead of OSHA regulations and avoid costly fines with predictive maintenance.</p>
-        <div class="cta">
-            <button>Get Your Free Compliance Guide Now!</button>
-        </div>
-    </div>
-    <div class="container">
-        <div class="content">
-            <h2>Key NFPA 70B Updates:</h2>
-            <ul>
-                <li><strong>Annual Thermographic Inspections:</strong> "Thermographic inspections shall be performed annually on electrical equipment to identify overheating components" - NFPA 70B.</li>
-                <li><strong>Scheduled Maintenance:</strong> "Equipment found to have anomalies shall be scheduled for corrective maintenance in accordance with the severity of the issue" - NFPA 70B.</li>
-                <li><strong>Predictive Maintenance:</strong> "Predictive maintenance, including infrared thermography, is essential to ensuring the reliability of electrical systems" - NFPA 70B.</li>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <a href="#" class="logo">NFPA CompliancePro</a>
+            <ul class="nav-menu">
+                <li class="nav-item"><a href="#about" class="nav-link">About</a></li>
+                <li class="nav-item"><a href="#services" class="nav-link">Services</a></li>
+                <li class="nav-item"><a href="#stats" class="nav-link">Statistics</a></li>
+                <li class="nav-item"><a href="#testimonials" class="nav-link">Testimonials</a></li>
+                <li class="nav-item"><a href="#contact" class="nav-link cta">Get Started</a></li>
             </ul>
-            
-            <h2>OSHA Crackdown on Arc Flash Hazards</h2>
-            <p>OSHA is increasing enforcement on Arc Flash compliance following their recent safety initiative. Ensuring compliance with NFPA 70E and 70B is more critical than ever.</p>
-            <p>Read more: <a href="https://www.osha.gov/news/newsreleases" target="_blank" rel="noopener noreferrer">OSHA Compliance Updates</a></p>
-            
-            <h2>NFPA 70B Saves Lives</h2>
-            <p>Implementing NFPA 70B guidelines helps prevent electrical failures that lead to injuries, fatalities, and costly damage. Regular thermal imaging inspections and predictive maintenance significantly reduce these risks.</p>
-            
-            <h2>Key Statistics on Electrical Fires</h2>
-            <ul>
-                <li><strong>Over 24,200 electrical fires</strong> occur annually, causing significant property damage and financial losses.</li>
-                <li><strong>More than $1.3 billion</strong> in damages are caused each year due to electrical system failures.</li>
-                <li><strong>Up to 51,000 fires</strong> annually are linked to electrical failures, resulting in fatalities and injuries.</li>
-            </ul>
-            
-            <h2>How We Can Help</h2>
-            <ul class="no-bullets">
-                <li>Get matched with a certified thermal imaging contractor in your area.</li>
-                <li>Ensure compliance with OSHA and NFPA 70B requirements.</li>
-                <li>Identify electrical hazards before they cause costly failures.</li>
-                <li>Improve workplace safety and reduce downtime.</li>
-            </ul>
-            
-            <h2 class="warning">⚠️ Don't Risk Non-Compliance – Take Action Now! ⚠️</h2>
-            <p class="urgent">Facilities that fail to comply with NFPA 70B face increased risks of electrical fires, OSHA penalties, and equipment failure. Don’t take the risk—ensure compliance today.</p>
-        </div>
-        
-        <div class="testimonials">
-            <h2>What Our Clients Say</h2>
-            <div class="testimonial">
-                <p>"Thanks to their services, we are now fully compliant and our workplace is much safer!" - John D.</p>
-            </div>
-            <div class="testimonial">
-                <p>"Their thorough inspections helped us identify potential hazards before they became a problem." - Sarah K.</p>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
             </div>
         </div>
-        
-        <div class="form-container">
-            <h2>Contact a Thermal Imaging Partner Now to Ensure Your Compliance!</h2>
-            <form action="https://manage.kmail-lists.com/subscriptions/subscribe" method="POST" target="_blank">
-                <input type="hidden" name="g" value="YOUR_KLAVIYO_LIST_ID">
-                
-                <div class="form-group">
-                    <label for="name">Full Name</label>
-                    <input type="text" id="name" name="name" required>
-                </div>
-                
-                <div class="form-group">
-                    <label for="email">Work Email</label>
-                    <input type="email" id="email" name="email" required>
-                </div>
-                
-                <div class="form-group">
-                    <label for="company">Company Name</label>
-                    <input type="text" id="company" name="company" required>
-                </div>
-                
-                <div class="form-group">
-                    <label for="phone">Phone Number</label>
-                    <input type="tel" id="phone" name="phone" pattern="\d{10,15}" title="Enter a valid phone number (10-15 digits)" required>
-                </div>
-                
-                <div class="form-group">
-                    <label for="industry">Industry</label>
-                    <select id="industry" name="industry" required>
-                        <option value="">Select Industry</option>
-                        <option value="Manufacturing">Manufacturing</option>
-                        <option value="Healthcare">Healthcare</option>
-                        <option value="Education">Education</option>
-                        <option value="Technology">Technology</option>
-                        <option value="Finance">Finance</option>
-                        <option value="Retail">Retail</option>
-                        <option value="Construction">Construction</option>
-                        <option value="Transportation">Transportation</option>
-                        <option value="Energy">Energy</option>
-                        <option value="Hospitality">Hospitality</option>
-                        <option value="Agriculture">Agriculture</option>
-                        <option value="Government">Government</option>
-                    </select>
-                </div>
-                
-                <button type="submit" class="btn">Protect Your Facility & Avoid OSHA Fines – Get Your Free NFPA 70B Compliance Guide Now!</button>
-            </form>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container hero-content">
+            <h1>Is Your Facility NFPA 70B Compliant?</h1>
+            <p>Stay ahead of OSHA regulations, prevent electrical fires, and avoid costly fines with our professional predictive maintenance solutions.</p>
+            <a href="#contact" class="btn">Get Your Free Compliance Assessment</a>
         </div>
-    </div>
-</body>
-</html>
+    </section>
+
+    <!-- Key NFPA Updates -->
+    <section id="about" class="section">
+        <div class="container">
+            <h2 class="section-title">Critical NFPA 70B Updates</h2>
+            <div class="info-cards">
+                <div class="card animate">
+                    <div class="card-header">
+                        <h3>Annual Inspections</h3>
+                    </div>
+                    <div class="card-body">
+                        <p>"Thermographic inspections shall be performed annually on electrical equipment to identify overheating components" - NFPA 70B.</p>
+                        <a href="#contact" class="btn">Schedule Inspection</a>
+                    </div>
+                </div>
+                <div class="card animate">
+                    <div class="card-header">
+                        <h3>Scheduled Maintenance</h3>
+                    </div>
+                    <div class="card-body">
+                        <p>"Equipment found to have anomalies shall be scheduled for corrective maintenance in accordance with the severity of the issue" - NFPA 70B.</p>
+                        <a href="#contact" class="btn">Learn More</a>
+                    </div>
+                </div>
+                <div class="card animate">
+                    <div class="card-header">
+                        <h3>Predictive Maintenance</h3>
+                    </div>
+                    <div class="card-body">
+                        <p>"Predictive maintenance, including infrared thermography, is essential to ensuring the reliability of electrical systems" - NFPA 70B.</p>
+                        <a href="#contact" class="btn">Get Started</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- OSHA Crackdown -->
+    <section id="services" class="section">
+        <div class="container">
+            <h2 class="section-title">OSHA's Enhanced Enforcement on Arc Flash Hazards</h2>
+            <p style="text-align: center; max-width: 800px; margin: 0 auto 40px;">OSHA is increasing enforcement on Arc Flash compliance following their recent safety initiative. Ensuring compliance with NFPA 70E and 70B is more critical than ever for workplace safety and avoiding penalties.</p>
+            
+            <div class="card animate" style="max-width: 800px; margin: 0 auto;">
+                <div class="card-header" style="display: flex; justify-content: space-between; align-items: center;">
+                    <h3>NFPA 70B Saves Lives</h3>
+                    <span style="font-size: 2rem;">⚡</span>
+                </div>
+                <div class="card-body">
+                    <p>Implementing NFPA 70B guidelines helps prevent electrical failures that lead to injuries, fatalities, and costly damage. Regular thermal imaging inspections and predictive maintenance significantly reduce these risks.</p>
+                    <a href="https://www.osha.gov/news/newsreleases" target="_blank" rel="noopener noreferrer" class="btn">OSHA Compliance Updates</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Statistics -->
+    <section id="stats" class="section stats">
+        <div class="container">
+            <h2 class="section-title" style="color: white;">Electrical Fire Statistics</h2>
+            <div class="stats-container">
+                <div class="stat-item animate">
+                    <h3>24,200+</h3>
+                    <p>Electrical fires occur annually</p>
+                </div>
+                <div class="stat-item animate">
+                    <h3>$1.3B+</h3>
+                    <p>In damages caused by electrical system failures</p>
+                </div>
+                <div class="stat-item animate">
+                    <h3>51,000</h3>
+                    <p>Fires annually linked to electrical failures</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features -->
+    <section class="section features">
+        <div class="container">
+            <h2 class="section-title">How We Can Help</h2>
+            <ul class="feature-list">
+                <li class="feature-item animate">
+                    <div class="feature-icon">✓</div>
+                    <div class="feature-text">
+                        <h3>Certified Thermal Imaging Contractors</h3>
+                        <p>Get matched with a certified thermal imaging contractor in your area.</p>
+                    </div>
+                </li>
+                <li class="feature-item animate">
+                    <div class="feature-icon">✓</div>
+                    <div class="feature-text">
+                        <h3>OSHA & NFPA 70B Compliance</h3>
+                        <p>Ensure compliance with all current OSHA and NFPA 70B requirements.</p>
+                    </div>
+                </li>
+                <li class="feature-item animate">
+                    <div class="feature-icon">✓</div>
+                    <div class="feature-text">
+                        <h3>Early Hazard Detection</h3>
+                        <p>Identify electrical hazards before they cause costly failures.</p>
+                    </div>
+                </li>
+                <li class="feature-item animate">
+                    <div class="feature-icon">✓</div>
+                    <div class="feature-text">
+                        <h3>Improved Safety & Reduced Downtime</h3>
+                        <p>Improve workplace safety and reduce costly operational downtime.</p>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section id="testimonials" class="section testimonials">
+        <div class="container">
+            <h2 class="section-title">What Our Clients Say</h2>
+            <div class="testimonial-container">
+                <div class="testimonial-item">
+                    <div class="testimonial-content">
+                        <p class="testimonial-text">"Thanks to their services, we are now fully compliant and our workplace is much safer! The thermal imaging identified issues we never knew existed."</p>
+                        <p class="testimonial-author">- John D., Manufacturing Plant Manager</p>
+                    </div>
+                </div>
+                <div class="testimonial-item">
+                    <div class="testimonial-content">
+                        <p class="testimonial-text">"Their thorough inspections helped us identify potential hazards before they became a problem. We've seen a remarkable improvement in our electrical system reliability."</p>
+                        <p class="testimonial-author">- Sarah K., Facility Director</p>
+                    </div>
+                </div>
+                <div class="testimonial-item">
+                    <div class="testimonial-content">
+                        <p class="testimonial-text">"The compliance guide was incredibly helpful. We implemented the recommended changes and passed our OSHA inspection with flying colors."</p>
+                        <p class="testimonial-author">- Michael R., Safety Coordinator</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <span class="warning-badge">⚠️ Warning</span>
+            <h2>Don't Risk Non-Compliance</h2>
+            <p>Facilities that fail to comply with NFPA 70B face increased risks of electrical fires, OSHA penalties, and equipment failure. Don't take the risk—ensure compliance today.</p>
+            <a href="#contact" class="btn">Get Your Free Compliance Guide</a>
+        </div>
+    </section>
+
+    <!-- Contact Form -->
+    <section id="contact" class="section contact">
+        <div class="container">
+            <h2 class="section-title">Contact a Thermal Imaging Partner Now</h2>
+            <div class="form-container animate">
+                <form action="https://manage.kmail-lists.com/subscriptions/subscribe" method="POST" target="_blank" id="contact-form">
+                    <input type="hidden" name="g" value="YOUR_KLAVIYO_LIST_ID">
+                    
+                    <div class="form-group">
+                        <label for="name">Full Name</label>
+                        <input type="text" id="name" name="name" class="form-control" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="email">Work Email</label>
+                        <input type="email" id="email" name="email" class="form-control" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="company">Company Name</label>
+                        <input type="text" id="company" name="company" class="form-control" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="phone">Phone Number</label>
+                        <input type="tel" id="phone" name="phone" class="form-control" pattern="\d{10,15}" title="Enter a valid phone number (10-15 digits)" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="industry">Industry</label>
+                        <select id="industry" name="industry" class="form-control" required>
+                            <option value="">Select Industry</option>
+                            <option value="Manufacturing">Manufacturing</option>
+                            <option value="Healthcare">Healthcare</option>
+                            <option value="Education">Education</option>
+                            <option value="Technology">Technology</option>
+                            <option value="Finance">Finance</option>
+                            <option value="Retail">Retail</option>
+                            <option value="Construction">Construction</option>
+                            <option value="Transportation">Transportation</option>
+                            <option value="Energy">Energy</option>
+                            <option value="Hospitality">Hospitality</option>
+                            <option value="Agriculture">Agriculture</option>
+                            <option value="Government">Government</option>
+                        </select>
+                    </div>
+                    
+                    <button type="submit" class="submit-btn">Protect Your Facility & Get Your Free NFPA 70B Compliance Guide</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-container">
+                <div class="footer-section">
+                    <h3>About Us</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">Our Mission</a></li>
+                        <li><a href="#">Our Team</a></li>
+                        <li><a href="#">Our Partners</a></li>
+                        <li><a href="#">Careers</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Services</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">Thermal Imaging</a></li>
+                        <li><a href="#">Compliance Consulting</a></li>
+                        <li><a href="#">Preventative Maintenance</a></li>
+                        <li><a href="#">Emergency Services</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Resources</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">NFPA 70B Guide</a></li>
+                        <li><a href="#">OSHA Regulations</a></li>
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="#">FAQ</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Contact</h3>
+                    <ul class="footer-links">
+                        <li><a href="tel:+18001234567">1-800-123-4567</a></li>
+                        <li><a href="mailto:info@nfpacompliancepro.com">info@nfpacompliancepro.com</a></li>
+                        <li><a href="#">Support</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copy">
+                <p>&copy; 2025 NFPA CompliancePro. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile Navigation
+        const hamburger = document.querySelector(".hamburger");
+        const navMenu = document.querySelector(".nav-menu");
+        const navLinks = document.querySelectorAll(".nav-link");
+
+        hamburger.addEventListener("click", () => {
+            hamburger.classList.toggle("active");
+            navMenu.classList.toggle("active");
+        });
+
+        navLinks.forEach(link => {
+            link.addEventListener("click", () => {
+                hamburger.classList.remove("active");
+                navMenu.classList.remove("active");
+            });
+        });
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                const targetElement = document.querySelector(targetId);
+                
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
